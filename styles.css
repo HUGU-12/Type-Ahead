@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+:root{
+  --gradient-color: linear-gradient(blue,white,red);
+}
+body{
+  background-color: rgb(50, 71, 88);
+}
+input{
+  width: 100%;
+  padding: 20px;
+}
+.search-form{
+  max-width: 500px;
+  margin: 30px auto;
+}
+.search{
+  text-align: center;
+  outline: none;
+  border: solid 12px rgba(0, 0, 0, 0.63);
+  position: relative;
+  border-radius: 10px;
+  box-shadow: inset 0 0 12px black;
+}
+.suggestions{
+  position: relative;
+  width: 80%;
+  left: 10%;
+}
+.suggestions li{
+  background: rgba(245, 245, 245, 0.785);
+  list-style: none;
+  border-bottom: solid grey 3px;
+  transition: background 0.5s; 
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+.suggestions li:nth-child(even){
+  transform: perspective(130px) rotateX(7deg) translateY(2px) scale(1.1);
+  background: linear-gradient(to bottom, hsl(240, 100%, 50%,0.1),white,hsl(0, 100%, 50%,0.5));
+}
+.suggestions li:nth-child(odd){
+  transform: perspective(130px) rotateX(-7deg) translateY(3px) scale(1.1);
+  background: linear-gradient(to bottom, hsl(240, 100%, 50%,0.1),white,hsl(0, 100%, 50%,0.5));
+}
+
